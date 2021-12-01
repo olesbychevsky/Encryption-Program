@@ -1,8 +1,6 @@
 package com.company;
 
-import java.util.ArrayList;
-import java.util.Random;
-import java.util.Scanner;
+import java.util.*;
 
 public class EncryptionProgram {
 
@@ -57,11 +55,31 @@ public class EncryptionProgram {
     }
 
     private void newKey() {
+        character = ' ';
+        list.clear();
+        shuffledList.clear();
 
+        for (int i = 32; i < 127; i++) {
+            list.add(Character.valueOf(character));
+            character++;
+        }
+        shuffledList = new ArrayList(list);
+        Collections.shuffle(shuffledList);
+        System.out.println("A new key has been generated");
     }
 
     private void getKey() {
-
+        System.out.println("Key:");
+        for (Character x : list) {
+            System.out.print(x);
+        }
+        System.out.println();
+        for (Character x : shuffledList) {
+            System.out.println(x);
+        }
+        System.out.println();
+            
+        }
     }
 
     private void encrypt() {
