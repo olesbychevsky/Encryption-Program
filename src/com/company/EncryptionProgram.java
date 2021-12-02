@@ -1,23 +1,19 @@
 package com.company;
 
-import java.beans.beancontext.BeanContextChild;
+
 import java.util.*;
 
 public class EncryptionProgram {
 
     private Scanner scanner;
-    private Random random;
     private ArrayList<Character> list;
     private ArrayList<Character> shuffledList;
     private char character;
-    private String line;
     private char[] letters;
-    private char[] secretLetters;
 
 
     EncryptionProgram() {
         scanner = new Scanner(System.in);
-        random = new Random();
         list = new ArrayList();
         shuffledList = new ArrayList();
         character = ' ';
@@ -98,7 +94,7 @@ public class EncryptionProgram {
             }
 
         }
-        System.out.println("Encrypted :");
+        System.out.println("Encrypted: ");
         for (char x : letters) {
             System.out.print(x);
         }
@@ -120,7 +116,7 @@ public class EncryptionProgram {
             }
 
         }
-        System.out.println("Decrypted :");
+        System.out.println("Decrypted: ");
         for (char x : letters) {
             System.out.print(x);
         }
@@ -128,7 +124,8 @@ public class EncryptionProgram {
     }
 
     private void quit() {
-
+        System.out.println("Bye!");
+        System.exit(0);
     }
 
 
